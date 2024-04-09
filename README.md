@@ -42,26 +42,26 @@ than 40 chars, it falls back to Node `Buffer` implementation, if available.
 Encoding:
 
 ```
-node src/__bench__/base64/encode.js
-@jsonjoy.com/base64 toBase64(uint8) x 1,257,419 ops/sec ±1.19% (93 runs sampled), 795 ns/op
-@jsonjoy.com/base64 createToBase64()(uint8) x 868,953 ops/sec ±0.96% (96 runs sampled), 1151 ns/op
-js-base64 x 974,991 ops/sec ±0.73% (94 runs sampled), 1026 ns/op
-fast-base64-encode x 428,545 ops/sec ±1.67% (96 runs sampled), 2333 ns/op
-base64-js x 295,165 ops/sec ±1.59% (98 runs sampled), 3388 ns/op
-Buffer.from(uint8).toString('base64'); x 973,173 ops/sec ±0.65% (95 runs sampled), 1028 ns/op
-Fastest is json-pack/util/base64 toBase64(uint8)
+node src/__bench__/encode.js
+util/base64 toBase64(uint8) x 1,531,283 ops/sec ±0.30% (92 runs sampled), 653 ns/op
+util/base64 createToBase64()(uint8) x 946,364 ops/sec ±0.76% (100 runs sampled), 1057 ns/op
+js-base64 x 1,103,190 ops/sec ±1.27% (96 runs sampled), 906 ns/op
+fast-base64-encode x 500,225 ops/sec ±0.64% (96 runs sampled), 1999 ns/op
+base64-js x 328,368 ops/sec ±0.25% (95 runs sampled), 3045 ns/op
+Buffer.from(uint8).toString('base64'); x 1,099,420 ops/sec ±0.20% (100 runs sampled), 910 ns/op
+Fastest is util/base64 toBase64(uint8)
 ```
 
 Decoding:
 
 ```
 node src/__bench__/decode.js
-@jsonjoy.com/base64 fromBase64(str) x 602,268 ops/sec ±1.09% (88 runs sampled), 1660 ns/op
-@jsonjoy.com/base64 createFromBase64()(str) x 392,345 ops/sec ±0.96% (91 runs sampled), 2549 ns/op
-Buffer.from(str, 'base64') x 498,609 ops/sec ±1.66% (93 runs sampled), 2006 ns/op
-base64-js x 439,246 ops/sec ±0.94% (89 runs sampled), 2277 ns/op
-js-base64 x 151,694 ops/sec ±0.51% (99 runs sampled), 6592 ns/op
-Fastest is json-pack/util/base64 fromBase64(str)
+@jsonjoy.com/base64 fromBase64(str) x 756,989 ops/sec ±0.46% (97 runs sampled), 1321 ns/op
+@jsonjoy.com/base64 createFromBase64()(str) x 475,591 ops/sec ±0.37% (96 runs sampled), 2103 ns/op
+Buffer.from(str, 'base64') x 545,012 ops/sec ±0.33% (101 runs sampled), 1835 ns/op
+base64-js x 487,015 ops/sec ±1.19% (94 runs sampled), 2053 ns/op
+js-base64 x 173,049 ops/sec ±0.20% (99 runs sampled), 5779 ns/op
+Fastest is @jsonjoy.com/base64 fromBase64(str)
 ```
 
 
