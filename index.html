@@ -5,6 +5,7 @@
 <li>Faster than the Node&#39;s implementation for short blobs, smaller than 40 bytes.</li>
 <li>Uses Node&#39;s implementation for long blobs, if available. Hence, it also works
 in browser, but in Node environment will perform faster for short strings.</li>
+<li>Can encode into Base64 text or Base64 <code>Uint8Array</code>.</li>
 </ul>
 <a id="md:usage" class="tsd-anchor"></a><h3><a href="#md:usage">Usage</a></h3><p>Use encoder compatible with Node&#39;s Buffer:</p>
 <pre><code class="language-ts"><span class="hl-0">import</span><span class="hl-1"> {</span><span class="hl-2">toBase64</span><span class="hl-1">} </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@jsonjoy.com/base64&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">toBase64</span><span class="hl-1">(</span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-4">Uint8Array</span><span class="hl-1">([</span><span class="hl-6">1</span><span class="hl-1">, </span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">]));</span>
