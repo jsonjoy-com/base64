@@ -1,5 +1,6 @@
 {
   "name": "@jsonjoy.com/base64",
+  "private": false,
   "version": "0.0.1",
   "description": "High-performance Base64 encoder and decoder",
   "author": {
