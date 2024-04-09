@@ -9,6 +9,7 @@ Fast Base64 encoder and decoder for browser and Node.js.
 - Faster than the Node's implementation for short blobs, smaller than 40 bytes.
 - Uses Node's implementation for long blobs, if available. Hence, it also works
   in browser, but in Node environment will perform faster for short strings.
+- Can encode into Base64 text or Base64 `Uint8Array`.
 
 
 ### Usage
